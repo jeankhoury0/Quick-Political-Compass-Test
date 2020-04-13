@@ -39,9 +39,17 @@
                 console.log(coef[element] + "parseFloat" + parseFloat(NameResponse[element]));
                 
             });
-             
-            
-            document.getElementById("valuescore").innerHTML = "The result is " + 
+
+            var TOTALOFCOEF= 0;
+            coef.forEach(element => {
+                TOTALOFCOEF = TOTALOFCOEF + parseInt(element); 
+                console.log("element" + element)
+            });
+
+            console.log("TOTAL OF COEFICIENT is" + TOTALOFCOEF);
+
+            ResultatFinal = Value/TOTALOFCOEF;
+            document.getElementById("valuescore").innerHTML = "The result is " + ResultatFinal.toFixed(2) ;
             
             
             
