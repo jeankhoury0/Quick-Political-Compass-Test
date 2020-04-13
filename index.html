@@ -11,7 +11,7 @@
     
 
     <script>
-        var coef= [3 , 1 , 2, 3 , 4 , 1 , 2.5 , 2 ];
+        var coef= [3,1,2,3,4,1,2,2];
         var NameResponse = []
         function findrange(id, questionelement, extremedown, extremeup){
             var Questionvalue= document.getElementById(id).value;
@@ -30,9 +30,21 @@
         }
 
         function calculate(){
-            NameResponse.forEach(element => {
-                alert(element)
+            var Value=0;
+            var ResultatFinal;
+            
+            coef.forEach(element => {
+
+                Value = Value + (parseFloat(coef[element]) * parseFloat(NameResponse[element] ?? 0));
+                console.log(coef[element] + "parseFloat" + parseFloat(NameResponse[element]));
+                
             });
+             
+            
+            document.getElementById("valuescore").innerHTML = "The result is " + 
+            
+            
+            
         }
 
     </script>
@@ -100,10 +112,11 @@
                 </fielset>
             </form>          </div>
           <div class="col-sm">
+            <button onclick="calculate()">Calc</button>
+            <h1 id="valuescore"> VALUE SCORE: </h1>
           </div>
         </div>
       </div>
-      <button onclick="calculate()">Calc</button>
       
    
 </body>
