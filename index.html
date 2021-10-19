@@ -23,7 +23,7 @@
     <hr>
     <div class="container">
         <div class="row">
-            <div class="col-3">
+            <div class="col-xl-3 col-lg-4 col-md-5">
                 <form>
                     <!--Form-->
                     <div class="form">
@@ -45,54 +45,53 @@
                         <!--Data form-->
                         <div class="col-12">
                             <br>
-                            <!-- Progrès/Tradition = 3-->
-                            <label for="ProTra">Progrès/Tradition</label>
+                            <!-- Progress / Tradition = 3-->
+                            <label for="ProTra">Progress / Tradition</label>
                             <br>
                             <input type="range" class="custom-range" min="-5" max="5" id="ProTra"
                                 oninput="getDataArary()">
-                            <p id="ProTra_result"> </p>
-                            <!-- Sécularisme/Religion = 1 -->
-                            <label for="SecRel">Sécularisme/Religion</label>
+                            <!-- Secularism / Religion = 1 -->
+                            <label for="SecRel">Secularism / Religion</label>
                             <br>
                             <input type="range" class="custom-range" min="-5" max="5" id="SecRel"
                             oninput="getDataArary()">
-                            <p id="SecRel_result"> </p>
+                            
                             <!-- Multiculturalisme/Assimilation = 2-->
-                            <label for="MulAss">Multiculturalisme/Assimilation</label>
+                            <label for="MulAss">Multiculturalism / Assimilation</label>
                             <br>
                             <input type="range" class="custom-range" min="-5" max="5" id="MulAss"
                             oninput="getDataArary()">
-                            <p id="MulAss_result"> </p>
+                            
                             <!--Pacifisme/Militarisme = 2-->
-                            <label for="PacMil">Pacifisme/Militarisme</label>
+                            <label for="PacMil">Pacifism / Militarism</label>
                             <br>
                             <input type="range" class="custom-range" min="-5" max="5" id="PacMil"
                             oninput="getDataArary()">
-                            <p id="PacMil_result"> </p>
+                            
                             <!-- Démocratie/Authoritarisme = 3-->
-                            <label for="DemAut">Démocratie/Authoritarisme</label>
+                            <label for="DemAut">Democracy / Authoritarianism</label>
                             <br>
                             <input type="range" class="custom-range" min="-5" max="5" id="DemAut"
                             oninput="getDataArary()">
-                            <p id="DemAut_result"> </p>
+                            
                             <!-- Liberté/Sécurité = 1-->
-                            <label for="LibSec">Liberté/Sécurité</label>
+                            <label for="LibSec">Freedom / Security</label>
                             <br>
                             <input type="range" class="custom-range" min="-5" max="5" id="LibSec"
                             oninput="getDataArary()">
-                            <p id="LibSec_result"> </p>
+                            
                             <!-- Réhabilitation/Punition = 2.5-->
-                            <label for="RehPun">Réhabilitation/Punition</label>
+                            <label for="RehPun">Rehabilitation / Punishment</label>
                             <br>
                             <input type="range" class="custom-range" min="-5" max="5" id="RehPun"
                             oninput="getDataArary()">
-                            <p id="RehPun_result"> </p>
+                            
                             <!--Internationaliste/nationaliste = 2-->
-                            <label for="IntNat">Internationaliste/nationaliste</label>
+                            <label for="IntNat">Internationalist / nationalist</label>
                             <br>
                             <input type="range" class="custom-range" min="-5" max="5" id="IntNat"
                             oninput="getDataArary()">
-                            <p id="IntNat_result"> </p>
+                            
                      </div>
 
 
@@ -104,10 +103,10 @@
                 </form>
             </div>
             <!--Empty column-->
-            <div class="col-3 d-print-none">
+            <div class="col-xl-3 col-lg-2 col-md-1 col-0 d-print-none">
 
             </div>
-            <div class="col-6">
+            <div class="col-xl-6 col-lg-5 col-md-6">
                 <h2>Map</h2>
                 <div>
                     <canvas id="political-chart"></canvas>

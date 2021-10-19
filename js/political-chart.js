@@ -31,14 +31,14 @@ function drawGraph(dataArray){
 
     const data = {
         labels: [
-          'Progrès/Tradition',
-          'Sécularisme/Religion',
-          'Multiculturalisme/Assimilation',
-          'Pacifisme/Militarisme',
-          'Démocratie/Authoritarisme',
-          'Liberté/Sécurité',
-          'Réhabilitation/Punition',
-          'Internationaliste/nationaliste',
+          'Progress / Tradition',
+          'Secularism / Religion',
+          'Multiculturalism / Assimilation',
+          'Pacifism / Militarism',
+          'Democracy / Authoritarianism',
+          'Freedom / Security',
+          'Rehabilitation / Punishment',
+          'Internationalist / nationalist',
         ],
         datasets: [{
           data: dataArray,
