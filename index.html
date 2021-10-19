@@ -1,136 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
 
 <head>
-    <title> Politic Axes </title>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="Chart.css">
-    <script src="Chart.js"></script>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/specific.css">
+    <link rel="stylesheet" media="print" href="./css/print.css" />
 
-    <script>
-        var coef= [3,1,2,3,4,1,2,2];
-        var NameResponse = []
-        function findrange(id, questionelement, extremedown, extremeup){
-            var Questionvalue= document.getElementById(id).value;
-            var output = document.getElementById(id + "_result");
-            var name= document.getElementById("name").value;
-            NameResponse[questionelement]= Questionvalue;
-
-            //to output
-            //if to see to what political he is going
-
-            if (Questionvalue > 0) {
-                output.innerHTML = (Questionvalue + ".   ." + name + " est vers: " + extremeup);
-            }
-            if (Questionvalue <= 0) {
-                output.innerHTML = (Questionvalue + ".   ." + name + " est vers: " + extremedown);
-            } 
-            
-
-
-        }
-
-        function calculate(){
-            var Value=0;
-            var ResultatFinal;
-            
-            coef.forEach(element => {
-
-                Value = Value + (parseFloat(coef[element]) * parseFloat(NameResponse[element] ?? 0));
-                console.log(coef[element] + "parseFloat" + parseFloat(NameResponse[element]));
-                
-            });
-
-            var TOTALOFCOEF= 0;
-            coef.forEach(element => {
-                TOTALOFCOEF = TOTALOFCOEF + parseInt(element); 
-                console.log("element" + element)
-            });
-
-            console.log("TOTAL OF COEFICIENT is" + TOTALOFCOEF);
-
-            ResultatFinal = Value/TOTALOFCOEF;
-            document.getElementById("valuescore").innerHTML = "The result is " + ResultatFinal.toFixed(2) ;
-            
-            
-            
-        }
-
-    </script>
-
-
+    <title>Polical Compas - Jean Khoury</title>
 </head>
 
 <body>
-    <br><br>
-    
-    <div class="container-fluid" >
+    <div class="container-fluid">
+        <h1>Political compas placement</h1>
+        <p>Please fill and print the political compas placement test so that we can asign you to your team</p>
+    </div>
+    <hr>
+    <div class="container">
         <div class="row">
-          <div class="col-sm">
-            <h1> Political Map placement</h1>
-            <h2>Test project by Jean Khoury</h2>
-          </div>
-          <div class="col-md">
-            <form>
-                <fielset>
-                    <p class="question">Whats your name?</p>
-                    <input type="input" id="name" value="John">
-                    <legend>Take the test</legend>
-                    <br>
-                    <!-- Progrès/Tradition = 3-->
-                    <label for="ProTra">Progrès/Tradition</label>
-                    <br>
-                    <input type="range" class="custom-range" min="-5" max="5" id="ProTra" oninput="findrange('ProTra',0,'progrès','tradition')">
-                    <p id="ProTra_result"> </p>
-                    <!-- Sécularisme/Religion = 1 -->
-                    <label for="SecRel">Sécularisme/Religion</label>
-                    <br>
-                    <input type="range" class="custom-range" min="-5" max="5" id="SecRel" oninput="findrange('SecRel',1,'Sécularisme','Religion')">
-                    <p id="SecRel_result"> </p>
-                    <!-- Multiculturalisme/Assimilation = 2-->
-                    <label for="MulAss">Multiculturalisme/Assimilation</label>
-                    <br>
-                    <input type="range" class="custom-range" min="-5" max="5" id="MulAss" oninput="findrange('MulAss',2,'Multiculturalisme','Assimilation')">
-                    <p id="MulAss_result"> </p>
-                    <!--Pacifisme/Militarisme = 2-->
-                    <label for="PacMil">Pacifisme/Militarisme</label>
-                    <br>
-                    <input type="range" class="custom-range" min="-5" max="5" id="PacMil" oninput="findrange('PacMil',3,'Pacifisme','Militarisme')">
-                    <p id="PacMil_result"> </p>
-                    <!-- Démocratie/Authoritarisme = 3-->
-                    <label for="DemAut">Démocratie/Authoritarisme</label>
-                    <br>
-                    <input type="range" class="custom-range" min="-5" max="5" id="DemAut" oninput="findrange('DemAut',4,'Démocratie','Authoritarisme')">
-                    <p id="DemAut_result"> </p>
-                    <!-- Liberté/Sécurité = 1-->
-                    <label for="LibSec">Liberté/Sécurité</label>
-                    <br>
-                    <input type="range" class="custom-range" min="-5" max="5" id="LibSec" oninput="findrange('LibSec',5,'Liberté','Sécurité')">
-                    <p id="LibSec_result"> </p>
-                    <!-- Réhabilitation/Punition = 2.5-->
-                    <label for="RehPun">Réhabilitation/Punition</label>
-                    <br>
-                    <input type="range" class="custom-range" min="-5" max="5" id="RehPun" oninput="findrange('RehPun',6,'Réhabilitation','Punition')">
-                    <p id="RehPun_result"> </p>
-                    <!--Internationaliste/nationaliste = 2-->
-                    <label for="IntNat">Internationaliste/nationaliste</label>
-                    <br>
-                    <input type="range" class="custom-range" min="-5" max="5" id="IntNat" oninput="findrange('IntNat',7,'Internationaliste','nationaliste')">
-                    <p id="IntNat_result"> </p>
-                    
-                </fielset>
-            </form>          </div>
-          <div class="col-sm">
-            <button class="btn btn-primary btn-lg btn-block" onclick="calculate()"> Calculate </button>
-            <h1 id="valuescore"> VALUE SCORE: </h1>
-          </div>
+            <div class="col-3">
+                <form>
+                    <!--Form-->
+                    <div class="form">
+                        <!--Participant details-->
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="participantName" placeholder="Name">
+                                <label for="participantName">Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="date" class="form-control" id="participantDob" placeholder="Date of birth">
+                                <label for="participantDob">Date of birth</label>
+                            </div>
+
+                            <input type="checkbox" id="participant-consent-share" checked="true" disabled>
+                            <label for="participant-consent-share" value="participant-consent-share"
+                                class="col-11">Please keep my details anonymous and do not send to team management.
+                                Checked by default as this is a demo</label>
+                        <!--Data form-->
+                        <div class="col-12">
+                            <br>
+                            <!-- Progrès/Tradition = 3-->
+                            <label for="ProTra">Progrès/Tradition</label>
+                            <br>
+                            <input type="range" class="custom-range" min="-5" max="5" id="ProTra"
+                                oninput="getDataArary()">
+                            <p id="ProTra_result"> </p>
+                            <!-- Sécularisme/Religion = 1 -->
+                            <label for="SecRel">Sécularisme/Religion</label>
+                            <br>
+                            <input type="range" class="custom-range" min="-5" max="5" id="SecRel"
+                            oninput="getDataArary()">
+                            <p id="SecRel_result"> </p>
+                            <!-- Multiculturalisme/Assimilation = 2-->
+                            <label for="MulAss">Multiculturalisme/Assimilation</label>
+                            <br>
+                            <input type="range" class="custom-range" min="-5" max="5" id="MulAss"
+                            oninput="getDataArary()">
+                            <p id="MulAss_result"> </p>
+                            <!--Pacifisme/Militarisme = 2-->
+                            <label for="PacMil">Pacifisme/Militarisme</label>
+                            <br>
+                            <input type="range" class="custom-range" min="-5" max="5" id="PacMil"
+                            oninput="getDataArary()">
+                            <p id="PacMil_result"> </p>
+                            <!-- Démocratie/Authoritarisme = 3-->
+                            <label for="DemAut">Démocratie/Authoritarisme</label>
+                            <br>
+                            <input type="range" class="custom-range" min="-5" max="5" id="DemAut"
+                            oninput="getDataArary()">
+                            <p id="DemAut_result"> </p>
+                            <!-- Liberté/Sécurité = 1-->
+                            <label for="LibSec">Liberté/Sécurité</label>
+                            <br>
+                            <input type="range" class="custom-range" min="-5" max="5" id="LibSec"
+                            oninput="getDataArary()">
+                            <p id="LibSec_result"> </p>
+                            <!-- Réhabilitation/Punition = 2.5-->
+                            <label for="RehPun">Réhabilitation/Punition</label>
+                            <br>
+                            <input type="range" class="custom-range" min="-5" max="5" id="RehPun"
+                            oninput="getDataArary()">
+                            <p id="RehPun_result"> </p>
+                            <!--Internationaliste/nationaliste = 2-->
+                            <label for="IntNat">Internationaliste/nationaliste</label>
+                            <br>
+                            <input type="range" class="custom-range" min="-5" max="5" id="IntNat"
+                            oninput="getDataArary()">
+                            <p id="IntNat_result"> </p>
+                     </div>
+
+
+                        <!--Submit button-->
+                        <br>
+                        <input class="btn btn-primary d-print-none" type="button" value="submit" onclick="getDataArary()">
+                        <input class="btn btn-primary d-print-none" type="button" value="print" onclick="print()">
+                    </div>
+                </form>
+            </div>
+            <!--Empty column-->
+            <div class="col-3 d-print-none">
+
+            </div>
+            <div class="col-6">
+                <h2>Map</h2>
+                <div>
+                    <canvas id="political-chart"></canvas>
+                </div>
+            </div>
+
         </div>
-      </div>
-      
-   
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!--Script for Chart.js cdn-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/political-chart.js"></script>
 </body>
 
-
+</html>
