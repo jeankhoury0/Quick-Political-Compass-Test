@@ -1,4 +1,4 @@
-# Political-Compass-Express
+# Quick-Political-Compass-Test
 
 This project was a Joint effort with [Raphael Zwein](https://www.linkedin.com/in/rapha%C3%ABl-zwein-709906213/). It was made out of the idea of doing a simpler version of
 [The political Compass](https://politicalcompass.org/).
