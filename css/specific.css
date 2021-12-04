@@ -2,6 +2,9 @@
     width: 100%;
 }
 
+table{
+    margin-top: -1.5em;
+}
 #result-bar-bg{
     
     background-color: #6c757d; 

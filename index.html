@@ -43,54 +43,162 @@
                                 Checked by default as this is a demo</label>
                         <!--Data form-->
                         <div class="col-12" onchange="computeResult()">
-                            <br>
-                            <!-- Progress / Tradition = 3-->
-                            <label for="ProTra">Progress / Tradition</label>
-                            <br>
-                            <input type="range" class="custom-range" min="-5" max="5" id="ProTra"
-                                oninput="getDataArary()">
-                            <!-- Secularism / Religion = 1 -->
-                            <label for="SecRel">Secularism / Religion</label>
-                            <br>
-                            <input type="range" class="custom-range" min="-5" max="5" id="SecRel"
-                            oninput="getDataArary()">
                             
-                            <!-- Multiculturalisme/Assimilation = 2-->
-                            <label for="MulAss">Multiculturalism / Assimilation</label>
-                            <br>
-                            <input type="range" class="custom-range" min="-5" max="5" id="MulAss"
-                            oninput="getDataArary()">
-                            
-                            <!--Pacifisme/Militarisme = 2-->
-                            <label for="PacMil">Pacifism / Militarism</label>
-                            <br>
-                            <input type="range" class="custom-range" min="-5" max="5" id="PacMil"
-                            oninput="getDataArary()">
-                            
-                            <!-- Démocratie/Authoritarisme = 3-->
-                            <label for="DemAut">Democracy / Authoritarianism</label>
-                            <br>
-                            <input type="range" class="custom-range" min="-5" max="5" id="DemAut"
-                            oninput="getDataArary()">
-                            
-                            <!-- Liberté/Sécurité = 1-->
-                            <label for="LibSec">Freedom / Security</label>
-                            <br>
-                            <input type="range" class="custom-range" min="-5" max="5" id="LibSec"
-                            oninput="getDataArary()">
-                            
-                            <!-- Réhabilitation/Punition = 2.5-->
-                            <label for="RehPun">Rehabilitation / Punishment</label>
-                            <br>
-                            <input type="range" class="custom-range" min="-5" max="5" id="RehPun"
-                            oninput="getDataArary()">
-                            
-                            <!--Internationaliste/nationaliste = 2-->
-                            <label for="IntNat">Internationalist / nationalist</label>
-                            <br>
-                            <input type="range" class="custom-range" min="-5" max="5" id="IntNat"
-                            oninput="getDataArary()">
-                            
+                            <div>
+                                <!-- Progress / Tradition-->
+                                <table  style="width: 100%;">
+                                            <tr>
+                                                <label for="ProTra">
+                                                    <td>Progress</td>
+                                                    <td align="right">Tradition</td>
+                                                </label>
+                                            </tr>        
+                                </table>
+                                <input type="range" class="custom-range" min="-10" max="10" id="ProTra" oninput="getDataArary()">
+                            </div>
+                            <div>
+                                <!-- Secularism / Religion-->
+                                <table style="width: 100%;">
+                                        <tr>
+                                            <label for="SecRel">
+                                                <td>Secularism</td>
+                                                <td align="right">Religion</td>
+                                            </label>
+                                        </tr>
+                                </table>
+                                <input type="range" class="custom-range" min="-10" max="10" id="SecRel" oninput="getDataArary()">                            
+                            </div>
+                            <div>
+                                <!-- Multiculturalisme/Assimilation-->
+                                <table style="width: 100%;">
+                                    <tr>
+                                        <label for="MulAss">
+                                            <td>Multiculturalism</td>
+                                            <td align="right">Assimilation</td>
+                                        </label>
+                                    </tr>
+                                </table>
+                                <input type="range" class="custom-range" min="-10" max="10" id="MulAss" oninput="getDataArary()">                            
+                        </div>
+
+                        <div>
+                            <!-- Pacifisme/Militarisme-->
+                            <table style="width: 100%;">
+                                <tr>
+                                    <label>
+                                        <td>Pacifism</td>
+                                        <td align="right">Militarism</td>
+                                    </label>
+                                </tr>
+                            </table>
+                            <input type="range" class="custom-range" min="-10" max="10" id="PacMil" oninput="getDataArary()">
+                        </div>
+
+                        <div>
+                            <!-- Démocratie/Authoritarisme-->
+                            <table style="width: 100%;">
+                                <tr>
+                                    <label>
+                                        <td>Democracy</td>
+                                        <td align="right">Authoritarianism</td>
+                                    </label>
+                                </tr>
+                            </table>
+                            <input type="range" class="custom-range" min="-10" max="10" id="DemAut" oninput="getDataArary()">
+                        </div>
+
+                        <div>
+                            <!-- Liberté/Sécurité-->
+                            <table style="width: 100%;">
+                                <tr>
+                                    <label>
+                                        <td>Freedom</td>
+                                        <td align="right">Security</td>
+                                    </label>
+                                </tr>
+                            </table>
+                            <input type="range" class="custom-range" min="-10" max="10" id="LibSec" oninput="getDataArary()">
+                        </div>
+
+                        <div>
+                            <!-- Réhabilitation/Punition-->
+                            <table style="width: 100%;">
+                                <tr>
+                                    <label>
+                                        <td>Rehabilitation</td>
+                                        <td align="right">Punishment</td>
+                                    </label>
+                                </tr>
+                            </table>
+                            <input type="range" class="custom-range" min="-10" max="10" id="RehPun" oninput="getDataArary()">
+                        </div>
+
+                        <div>
+                            <!-- Internationaliste/nationaliste-->
+                            <table style="width: 100%;">
+                                <tr>
+                                    <label>
+                                        <td>Internationalist</td>
+                                        <td align="right">Nationalist</td>
+                                    </label>
+                                </tr>
+                            </table>
+                            <input type="range" class="custom-range" min="-10" max="10" id="IntNat" oninput="getDataArary()">
+                        </div>
+                        
+                        <div>
+                            <!-- USA / Russia-->
+                            <table style="width: 100%;">
+                                <tr>
+                                    <label>
+                                        <td>USA</td>
+                                        <td align="right">Russia</td>
+                                    </label>
+                                </tr>
+                            </table>
+                            <input type="range" class="custom-range" min="-10" max="10" id="UsaRus" oninput="getDataArary()">
+                        </div>
+
+                        <div>
+                            <!-- Federal / Unitary-->
+                            <table style="width: 100%;">
+                                <tr>
+                                    <label>
+                                        <td>Federal</td>
+                                        <td align="right">Unitary</td>
+                                    </label>
+                                </tr>
+                            </table>
+                            <input type="range" class="custom-range" min="-10" max="10" id="FedUni" oninput="getDataArary()">
+                        </div>
+
+                        <div>
+                            <!--Reformism / Revolution-->
+                            <table style="width: 100%;">
+                                <tr>
+                                    <label>
+                                        <td>Reformism</td>
+                                        <td align="right">Revolution</td>
+                                    </label>
+                                </tr>
+                            </table>
+                            <input type="range" class="custom-range" min="-10" max="10" id="RefRev" oninput="getDataArary()">
+                        </div>
+
+                        <div>
+                            <!--Ecology / Production-->
+                            <table style="width: 100%;">
+                                <tr>
+                                    <label>
+                                        <td>Ecology</td>
+                                        <td align="right">Production</td>
+                                    </label>
+                                </tr>
+                            </table>
+                            <input type="range" class="custom-range" min="-10" max="10" id="EcoPro" oninput="getDataArary()">
+                        </div>
+
+                                                
                      </div>
 
 
