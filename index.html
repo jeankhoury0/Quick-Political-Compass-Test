@@ -15,20 +15,19 @@
     <title>Polical Compas - Jean Khoury</title>
 </head>
 
-<body onload="FillPreFilledLink()">
+<body onload="FillPreFilledLink()" class="bg-dark text-light">
     <div class="container-fluid">
         <h1>Political compas placement</h1>
         <p>Please fill and print the political compas placement test so that we can asign you to your team</p>
     </div>
-    <hr>
     <div class="container">
-        <div class="row">
+        <div class="row border border-primary rounded p-1 py-3 bg-white text-dark" >
             <div class="col-xl-3 col-lg-4 col-md-5">
                 <form>
+                <fieldset>
                     <!--Form-->
                     <div class="form">
                         <!--Participant details-->
-
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control" id="participantName" placeholder="Name">
                                 <label for="participantName">Name</label>
@@ -43,7 +42,7 @@
                                 class="col-11">Please keep my details anonymous and do not send to team management.
                                 Checked by default as this is a demo</label>
                         <!--Data form-->
-                        <div class="col-12">
+                        <div class="col-12" onchange="computeResult()">
                             <br>
                             <!-- Progress / Tradition = 3-->
                             <label for="ProTra">Progress / Tradition</label>
@@ -102,6 +101,7 @@
                         <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#qrModal" onclick="generateQRcode()">
                         Generate QR code</button>
                     </div>
+                    </fieldset>
                 </form>
                
             </div>
@@ -110,11 +110,20 @@
 
             </div>
             <div class="col-xl-6 col-lg-5 col-md-6">
-                <h2>Map</h2>
+                <h2></h2>
                 <div>
                     <canvas id="political-chart"></canvas>
+                    <div id="result-bar-bg">
+                            <div id="result-bar-result">
+                                h2
+                            </div>
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <div >
+            <p class="h5 text-end pt-2">Made by <a href="https://jeankhoury.com" target="_blank" rel="noopener">Jean Khoury</a> and <a href="https://www.linkedin.com/in/rapha%C3%ABl-zwein-709906213/ target="_blank" rel="noopener"">Raphael Zwein</a> </p>
         </div>
 
 

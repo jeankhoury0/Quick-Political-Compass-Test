@@ -24,7 +24,27 @@ function getDataArary(){
     // myChart.update();
 }
 
-function testupd(){
+const computeResult= () => {
+  let res = 0;
+  for (let i = 0; i < dataArray.length; i++) {
+    res += dataArray[i]*coef[i]
+  }
+  console.clear()
+  console.table([dataArray,coef])
+  res = (res / 9)+10;
+  console.log(
+    "%c Computed Score: ",
+    "border: 1px solid red ; background: red; color:white;",
+    res.toPrecision(2),
+  );
+  console.log(res*10);
+  document.getElementById("result-bar-result").style.width = `${res*5}%`;
+  document.getElementById("result-bar-result").innerText = ((res-10).toPrecision(2));
+  return res.toPrecision(2);
+
+}
+
+function dataArrayd(){
 }
 
 function drawGraph(dataArray){

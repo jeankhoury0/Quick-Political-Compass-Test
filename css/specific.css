@@ -1,3 +1,20 @@
 .custom-range{
     width: 100%;
 }
+
+#result-bar-bg{
+    
+    background-color: #6c757d; 
+    height: 50px;  
+}
+#result-bar-result{
+    display: inline-block;
+    width: 50%;
+    height: 50px;  
+    text-align: center;
+    background-color: #0d6efd;
+    color: white;
+    position: relative;
+    font-size: x-large;
+
+}
